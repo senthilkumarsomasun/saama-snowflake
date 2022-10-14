@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('log') {
-      steps {
-        sh 'ls -ltra'
+      parallel {
+        stage('log') {
+          steps {
+            sh 'ls -ltra'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'liquibase status'
+          }
+        }
+
       }
     }
 
