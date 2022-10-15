@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('liqubaseVersion') {
           steps {
-            sh 'liquibase status'
+            sh 'liqubase -version'
           }
         }
 
