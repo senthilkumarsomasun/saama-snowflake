@@ -17,26 +17,15 @@ pipeline {
 
         stage('liqubaseVersion') {
           steps {
-            sh '''pipeline {
-  agent {
-    docker { image \'liquibase/liquibase:4.4.2\' }
-  }
-  stages {
-    stage(\'Test\') {
-      steps {
-        sh \'liquibase --version\'
-      }
-    }
-  }
-}'''
-            }
+            sh 'liquibase --version'
           }
-
         }
-      }
 
+      }
     }
-    environment {
-      nameofperson = 'Senthil Kumar Somasundaram'
-    }
+
   }
+  environment {
+    nameofperson = 'Senthil Kumar Somasundaram'
+  }
+}
