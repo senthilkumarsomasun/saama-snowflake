@@ -17,12 +17,15 @@ pipeline {
 
         stage('liqubaseVersion') {
           steps {
-            sh 'time'
+            sh 'echo $nameofperson'
           }
         }
 
       }
     }
 
+  }
+  environment {
+    nameofperson = 'Senthil Kumar Somasundaram'
   }
 }
