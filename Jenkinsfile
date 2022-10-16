@@ -35,7 +35,7 @@ export CLASSPATH=/etc/liqubase/lib/snowflake-jdbc-3.9.2.jar'''
       }
     }
 
-    stage('error') {
+    stage('SendEmail') {
       steps {
         emailext(subject: 'EDH-DEV Deployment', body: 'Hi, your Code was deployed successfully', compressLog: true, to: 'senthilkumarsomasun@gmail.com', saveOutput: true, attachLog: true)
       }
