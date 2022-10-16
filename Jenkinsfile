@@ -31,6 +31,5 @@ echo ${DB_CRED_USR}
   }
   environment {
     SF_CRED=Credentials('SNOWFLAKE_CRED')
-    nameofperson = 'Senthil Kumar Somasundaram'
-  }
+    }
 }
