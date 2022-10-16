@@ -8,9 +8,6 @@ pipeline {
     }
 
     stage('log') {
-      environment {
-        DB_CRED = 'credentials(\'SNOWFLAKE_CRED\')'
-      }
       parallel {
         stage('log') {
           steps {
@@ -23,7 +20,8 @@ pipeline {
             sh '''echo $PATH
 export PATH=$PATH:/etc/liqubase'''
             sh '/etc/liqubase/liquibase --version'
-            sh '''echo ${DB_CRED_USR}
+            sh '''DB_CRED=credentials(\'SNOWFLAKE_CRED\')
+echo ${DB_CRED_USR}
 '''
           }
         }
