@@ -31,7 +31,6 @@
         </column>
       </addColumn>
     </changeSet>
-     </changeSet>
      <changeSet author="Senthil Kumar Somasundaram" id="addColumn-countries-4">
       <addColumn tableName="countries">
         <column name="statusOfState1" type="VARCHAR(3)">
