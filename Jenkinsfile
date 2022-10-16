@@ -17,7 +17,8 @@ pipeline {
 
         stage('liqubaseVersion') {
           steps {
-            sh 'pwd'
+            sh '''pwd
+liquibase --version'''
           }
         }
 
