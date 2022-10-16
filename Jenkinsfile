@@ -29,7 +29,5 @@ echo ${DB_CRED_USR}
     }
 
   }
-  environment {
-    SF_CRED=credentials('SNOWFLAKE_CRED')
-    }
+
 }
