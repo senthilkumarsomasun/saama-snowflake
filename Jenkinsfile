@@ -19,7 +19,7 @@ pipeline {
           steps {
             sh '''echo $PATH
 export PATH=$PATH:/etc/liqubase'''
-            sh 'liquibase --version'
+            sh 'echo $PATH'
           }
         }
 
