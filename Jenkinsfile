@@ -1,10 +1,5 @@
 pipeline {
   agent any
-  environment {
-    SF_CRED=credentials('SNOWFLAKE_CRED')
-    DBURL_CRED=credentials('JDBC_URL')
-  }
-  
   stages {
     stage('Test') {
       steps {
@@ -25,7 +20,7 @@ pipeline {
             sh '''echo $PATH
 export PATH=$PATH:/etc/liqubase'''
             sh '/etc/liqubase/liquibase --version'
-
+            sh 'echo ${SF_CRED_USR}'
           }
         }
 
@@ -33,5 +28,7 @@ export PATH=$PATH:/etc/liqubase'''
     }
 
   }
-
+  environment {
+    SF_CRED = credentials('SNOWFLAKE_CRED')
+  }
 }
