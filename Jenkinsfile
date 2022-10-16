@@ -29,6 +29,7 @@ export PATH=$PATH:/etc/liqubase
         stage('OMLIQUBASEOM') {
           steps {
             sh '/etc/liqubase/liquibase update --url=\'jdbc:snowflake://$JDBC_URL_USR?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW'
+            sh 'java --version'
           }
         }
 
