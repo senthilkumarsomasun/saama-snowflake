@@ -30,6 +30,6 @@ echo ${DB_CRED_USR}
 
   }
   environment {
-    SF_CRED=Credentials('SNOWFLAKE_CRED')
+    SF_CRED=credentials('SNOWFLAKE_CRED')
     }
 }
