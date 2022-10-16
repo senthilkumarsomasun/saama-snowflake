@@ -44,5 +44,6 @@ export CLASSPATH=/etc/liqubase/lib/snowflake-jdbc-3.9.2.jar'''
   }
   environment {
     SF_CRED = credentials('SNOWFLAKE_CRED')
+    SF_URL = credentials('JDBC_URL')
   }
 }
