@@ -20,7 +20,7 @@ pipeline {
             sh '''echo $PATH
 export PATH=$PATH:/etc/liqubase'''
             sh '/etc/liqubase/liquibase --version'
-            sh 'echo ${SNOWFLAKE_CRED_USR}'
+            sh 'echo ${SF_CRED_USR}'
           }
         }
 
