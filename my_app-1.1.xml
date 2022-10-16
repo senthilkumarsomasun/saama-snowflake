@@ -17,4 +17,11 @@
         </column>
       </addColumn>
     </changeSet>
+    <changeSet author="Senthil Kumar Somasundaram" id="addColumn-countries-2">
+      <addColumn tableName="countries">
+        <column name="status" type="VARCHAR(3)">
+          <constraints nullable="false"/>
+        </column>
+      </addColumn>
+    </changeSet>
 </databaseChangeLog>
