@@ -17,7 +17,8 @@ pipeline {
 
         stage('liqubaseVersion') {
           steps {
-            sh 'echo $PATH'
+            sh '''echo $PATH
+export PATH=$PATH:/etc/liqubase'''
           }
         }
 
