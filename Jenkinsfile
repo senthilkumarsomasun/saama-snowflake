@@ -20,8 +20,7 @@ pipeline {
             sh '''echo $PATH
 export PATH=$PATH:/etc/liqubase'''
             sh '/etc/liqubase/liquibase --version'
-echo ${DB_CRED_USR}
-'''
+
           }
         }
 
