@@ -34,7 +34,7 @@ export CLASSPATH=/etc/liqubase/lib/snowflake-jdbc-3.9.2.jar'''
 
 '''
             sh '''
-/etc/liqubase/liquibase update --url=\'jdbc:snowflake://saama.snowflakecomputing.com/?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&&role=PUBLIC\' --changeLogFile=\'https://github.com/senthilkumarsomasun/saama-snowflake/commit/46d3b1128ab37761f7da4233fa7623a2d79e86c9\' --username=$SF_CRED_USR --password=$SF_CRED_PSW'''
+/etc/liqubase/liquibase update --url=\'https://github.com/senthilkumarsomasun/saama-snowflake/blob/main/my_app-1.1.xmlhttps://github.com/senthilkumarsomasun/saama-snowflake/blob/main/my_app-1.1.xml\' --username=$SF_CRED_USR --password=$SF_CRED_PSW'''
           }
         }
 
