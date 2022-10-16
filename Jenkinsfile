@@ -26,9 +26,9 @@ export CLASSPATH=/etc/liqubase/lib/snowflake-jdbc-3.9.2.jar'''
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
-            sh '/etc/liqubase/liquibase update --url="jdbc:snowflake:saama.snowflakecomputing.com/?db=DEV_CUST_DB&schema=CUSTOMER" --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW'
+            sh '/etc/liqubase/liquibase update --url="jdbc:snowflake:saama.snowflakecomputing.com/?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER" --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW'
           }
         }
 
