@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    SF_CRED=credentials('SNOWFLAKE_CRED')
+  }
   stages {
     stage('Test') {
       steps {
