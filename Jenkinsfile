@@ -20,7 +20,6 @@ pipeline {
             sh '''echo $PATH
 export PATH=$PATH:/etc/liqubase'''
             sh '/etc/liqubase/liquibase --version'
-            sh '''DB_CRED=credentials(\'SNOWFLAKE_CRED\')
 echo ${DB_CRED_USR}
 '''
           }
@@ -31,6 +30,7 @@ echo ${DB_CRED_USR}
 
   }
   environment {
+    SF_CRED=Credentials('SNOWFLAKE_CRED')
     nameofperson = 'Senthil Kumar Somasundaram'
   }
 }
