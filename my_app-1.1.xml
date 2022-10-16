@@ -52,4 +52,11 @@
         </column>
       </addColumn>
     </changeSet>
+       <changeSet author="Senthil Kumar Somasundaram" id="addColumn-countries-7">
+      <addColumn tableName="countries">
+        <column name="climatecode123" type="VARCHAR(3)">
+          <constraints nullable="false"/>
+        </column>
+      </addColumn>
+    </changeSet>
 </databaseChangeLog>
