@@ -17,7 +17,7 @@ pipeline {
 
         stage('liqubaseVersion') {
           steps {
-            sh 'echo $'
+            sh 'echo $PATH'
           }
         }
 
