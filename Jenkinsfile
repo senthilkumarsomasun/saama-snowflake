@@ -25,6 +25,12 @@ export PATH=$PATH:/etc/liqubase'''
           }
         }
 
+        stage('') {
+          steps {
+            sh 'liquibase update --url="jdbc:snowflake:{$SF_URL_CRED_USR}?db=DEV_CUST_DB&schema=CUSTOMER" --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW'
+          }
+        }
+
       }
     }
 
