@@ -18,8 +18,8 @@ pipeline {
         stage('liqubaseVersion') {
           steps {
             sh '''echo $PATH
-export PATH=$PATH:/etc/liqubase;
-export CLASSPATH=/etc/liqubase/lib/snowflake-jdbc-3.9.2.jar'''
+export PATH=$PATH:/etc/liqubase
+'''
             sh '/etc/liqubase/liquibase --version'
             sh 'echo ${SF_CRED_USR}'
             sh 'echo ${SF_URL_CRED_USR} ; echo ${SF_URL_CRED_PSW}'
