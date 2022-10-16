@@ -33,7 +33,7 @@ export CLASSPATH=/etc/liqubase/lib/snowflake-jdbc-3.9.2.jar'''
 
 
 '''
-            sh '''export my_app_wrapper=\'https://github.com/senthilkumarsomasun/saama-snowflake/commit/46d3b1128ab37761f7da4233fa7623a2d79e86c9\';
+            sh '''export my_app_wrapper="\'https://github.com/senthilkumarsomasun/saama-snowflake/commit/46d3b1128ab37761f7da4233fa7623a2d79e86c9\'";
 /etc/liqubase/liquibase update --url=\'jdbc:snowflake://saama.snowflakecomputing.com/?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&&role=PUBLIC\' --changeLogFile=$my_app_wrapper --username=$SF_CRED_USR --password=$SF_CRED_PSW'''
           }
         }
