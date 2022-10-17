@@ -39,7 +39,7 @@ export PATH=$PATH:/etc/liqubase
 
     stage('emailNotfification') {
       steps {
-        emailext(subject: 'EDH-DevOps', body: 'EDH-DevOps', to: 'senthilkumarsomasun@gmail.com')
+        emailext(subject: 'EDH-DevOps', body: 'EDH-DevOps', to: 'senthilkumarsomasun@gmail.com', from: 'senthilkumarsomasun@gmail.com')
       }
     }
 
