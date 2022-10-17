@@ -37,6 +37,12 @@ export PATH=$PATH:/etc/liqubase
       }
     }
 
+    stage('emailNotfification') {
+      steps {
+        emailext(subject: 'EDH-DevOps', body: 'EDH-DevOps', to: 'senthilkumarsomasun@gmail.com')
+      }
+    }
+
   }
   environment {
     SF_CRED = credentials('SNOWFLAKE_CRED')
