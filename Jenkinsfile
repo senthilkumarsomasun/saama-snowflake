@@ -28,18 +28,16 @@ export PATH=$PATH:/etc/liqubase
 
         stage('OMLIQUBASEOM') {
           steps {
-            sh 'ls -ltr'
-            sh 'java --version'
-            sh '/etc/liqubase/liquibase update --url=\'jdbc:snowflake://saama.snowflakecomputing.com/?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW'
+            sh '/etc/liqubase/liquibase update --url=\'jdbc:snowflake://$JDBC_URL_USR?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW --log-level flag'
           }
         }
 
       }
     }
 
-    stage('emailNotfification') {
+    stage('SendEmail') {
       steps {
-        emailext(subject: 'EDH-DevOps', body: 'EDH-DevOps', to: 'senthilkumarsomasun@gmail.com', from: 'senthilkumarsomasun@gmail.com')
+        emailext(subject: 'EDH-DEV Deployment', body: 'Hi, your Code was deployed successfully', compressLog: true, to: 'senthilkumarsomasun@gmail.com', saveOutput: true, attachLog: true)
       }
     }
 
