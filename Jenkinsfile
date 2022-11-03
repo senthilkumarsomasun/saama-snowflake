@@ -37,7 +37,7 @@ export PATH=$PATH:/etc/liqubase
 
     stage('SendEmail') {
       steps {
-        emailext(subject: 'EDH-DEV Deployment', body: 'Hi, your Code was deployed successfully', compressLog: true, to: 'senthilkumarsomasun@gmail.com', saveOutput: true, attachLog: true)
+        emailext(subject: 'CSAA', body: 'CSAA', replyTo: 'senitbox@gmail.com', to: 'senthilkumarsomasun@gmail.com')
       }
     }
 
