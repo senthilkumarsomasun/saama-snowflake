@@ -37,7 +37,7 @@ export PATH=$PATH:/etc/liqubase
 
     stage('Send Email Notifications') {
       steps {
-        emailext(subject: 'CI/CD - Automation - DEV Build ', body: 'CI/CD - Automation - DEV Build ', replyTo: 'senthilkumarsomasun@gmail.com', attachLog: true, saveOutput: true, to: 'senthilkumarsomasun@gmail.com')
+        emailext(subject: 'CI/CD - Automation - DEV Build ', body: 'CI/CD - Automation - DEV Build ', replyTo: 'senitbox@gmail.com', attachLog: true, saveOutput: true, to: 'senthilkumarsomasun@gmail.com')
       }
     }
 
