@@ -35,8 +35,8 @@ export database=DEV_CUST_DB
 export sch=CUSTOMER
 export ops_role=PUBLIC
 export whs=DEMO_WH
-export sf_url=jdbc:snowflake://${url_link}?warehouse=${whs}~db=${database}~schema=${sch}~role=${ops_role} || tr \'~\' \'&\'
-echo ${sf_url}'''
+echo jdbc:snowflake://${url_link}?warehouse=${whs}~db=${database}~schema=${sch}~role=${ops_role} || tr \'~\' \'&\'
+#echo ${sf_url}'''
           }
         }
 
