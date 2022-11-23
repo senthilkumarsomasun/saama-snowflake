@@ -35,9 +35,9 @@ export PATH=$PATH:/etc/liqubase
       }
     }
 
-    stage('SendEmail') {
+    stage('Send Email Notifications') {
       steps {
-        emailext(subject: 'CI/CD Deployment Run', body: 'CI/CD Deployment Run - DEV Run', replyTo: 'senitbox@gmail.com', to: 'senthilkumarsomasun@gmail.com')
+        emailext(subject: 'CI/CD - Automation - DEV Build ', body: 'CI/CD - Automation - DEV Build ', replyTo: 'senthilkumarsomasun@gmail.com', attachLog: true, saveOutput: true, to: 'senthilkumarsomasun@gmail.com')
       }
     }
 
