@@ -21,7 +21,7 @@ pipeline {
 export PATH=$PATH:/etc/liqubase
 '''
             sh '/etc/liqubase/liquibase --version'
-            sh 'echo ${SF_CRED_USR}'
+            sh 'echo ${JDBC_URL}'
             sh 'echo ${SF_URL_CRED_USR} ; echo ${SF_URL_CRED_PSW}'
           }
         }
