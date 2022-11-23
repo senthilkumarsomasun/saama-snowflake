@@ -21,14 +21,16 @@ pipeline {
 export PATH=$PATH:/etc/liqubase
 '''
             sh '/etc/liqubase/liquibase --version'
-            sh 'echo ${JDBC_URL}'
+            sh '''echo ${SF_URL_USR}
+echo ${SF_CRED_USR}
+echo ${SF_CRED_PSW}'''
             sh 'echo ${SNOWFLAKE_CRED_USR} ; echo ${SNOWFLAKE_CRED_PSW}'
           }
         }
 
         stage('OMLIQUBASEOM') {
           steps {
-            sh '/etc/liqubase/liquibase update --url=\'jdbc:snowflake://$SF_URL_USR?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW --log-level flag'
+            sh '#/etc/liqubase/liquibase update --url=\'jdbc:snowflake://$SF_URL_USR?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW --log-level flag'
           }
         }
 
