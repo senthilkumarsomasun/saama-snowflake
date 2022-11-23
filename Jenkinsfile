@@ -28,9 +28,12 @@ echo ${SF_CRED_PSW}'''
           }
         }
 
-        stage('OMLIQUBASEOM') {
+        stage('Snowflake-Call-Updates-DDL') {
           steps {
-            sh '#/etc/liqubase/liquibase update --url=\'jdbc:snowflake://$SF_URL_USR?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW --log-level flag'
+            sh '''#/etc/liqubase/liquibase update --url=\'jdbc:snowflake://$SF_URL_USR?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=$SF_CRED_USR --password=$SF_CRED_PSW --log-level flag
+/etc/liqubase/liquibase update --url=\'jdbc:snowflake://${SF_URL_USR}?warehouse=DEMO_WH&db=DEV_CUST_DB&schema=CUSTOMER&role=PUBLIC\' --changeLogFile=my_app-wrapper.xml --username=${SF_CRED_USR} --password=${SF_CRED_PSW} --log-level flag
+
+'''
           }
         }
 
