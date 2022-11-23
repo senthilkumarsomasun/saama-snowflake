@@ -22,7 +22,7 @@ export PATH=$PATH:/etc/liqubase
 '''
             sh '/etc/liqubase/liquibase --version'
             sh 'echo ${JDBC_URL}'
-            sh 'echo ${SF_URL_CRED_USR} ; echo ${SF_URL_CRED_PSW}'
+            sh 'echo ${SNOWFLAKE_CRED_USR} ; echo ${SNOWFLAKE_CRED_PSW}'
           }
         }
 
