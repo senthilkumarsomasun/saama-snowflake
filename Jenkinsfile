@@ -35,13 +35,17 @@ export sfdb=DEV_CUST_DB
 export sch=CUSTOMER
 export ops_role=PUBLIC
 export whs=DEMO_WH
+echo \'---------------------\'
 echo ${url_link}
 echo ${sfdb}
 echo ${sch}
 echo ${ops_role}
 echo ${whs}
+echo \'---------------------\'
 export sf_url=jdbc:snowflake://${url_link}?warehouse=${whs}&db=${sfdb}&schema=${sch}&role=${ops_role}
 echo ${sf_url}
+echo \'---------------------\'
+
 #/etc/liqubase/liquibase update --url=${sf_url} --changeLogFile=my_app-wrapper.xml --username=${SF_CRED_USR} --password=${SF_CRED_PSW}'''
           }
         }
