@@ -43,7 +43,7 @@ export PATH=$PATH:/etc/liqubase
 
   }
   environment {
-    SF_CRED = 'SNOWFLAKE_CRED'
-    SF_URL = 'JDBC_URL'
+    SF_CRED = credentials('SNOWFLAKE_CRED')
+    SF_URL = credentials('JDBC_URL')
   }
 }
