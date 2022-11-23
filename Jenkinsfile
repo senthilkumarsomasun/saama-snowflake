@@ -37,7 +37,7 @@ export PATH=$PATH:/etc/liqubase
 
     stage('SendEmail') {
       steps {
-        emailext(subject: 'CSAA', body: 'CSAA', replyTo: 'senitbox@gmail.com', to: 'senthilkumarsomasun@gmail.com')
+        emailext(subject: 'CI/CD Deployment Run', body: 'CI/CD Deployment Run - DEV Run', replyTo: 'senitbox@gmail.com', to: 'senthilkumarsomasun@gmail.com')
       }
     }
 
