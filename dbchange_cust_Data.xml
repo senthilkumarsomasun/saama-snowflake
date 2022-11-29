@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="senit (generated)" id="1662849740888-1">
+        <createTable tableName="ADDRESS">
+            <column name="ADDRESS_KEY" type="NUMBER(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_CONSTRAINT_fcbcb3d2-3459-4490-9e04-6e2dbfb5f105"/>
+            </column>
+            <column name="ADDRESS1" type="VARCHAR(25)"/>
+            <column name="ADDRESS2" type="VARCHAR(25)"/>
+            <column name="ZIP" type="VARCHAR(25)"/>
+            <column name="STATE" type="VARCHAR(20)"/>
+            <column name="CITY" type="VARCHAR(25)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="senit (generated)" id="1662849740888-2">
+        <createTable tableName="CUSTOMER">
+            <column name="CUST_MDM" type="NUMBER(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_CONSTRAINT_131c5383-440d-4a3d-ab0a-14865be0b559"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR(50)"/>
+            <column name="MIDDLE_NAME" type="VARCHAR(50)"/>
+            <column name="LAST_NAME" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRIMARY_INSURED_STATUS" type="VARCHAR(1)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
