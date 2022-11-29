@@ -1,5 +1,5 @@
 --liquibase formatted CREATE CUSTOMERCARE TABLE
---changeset Kumar:10999
+--changeset Kumar:10999 endDelimiter:;
 
 create or replace procedure sp_pi()
     returns float not null
