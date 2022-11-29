@@ -11,5 +11,5 @@
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
   <include file="dbchange_custData.snowflake.sql"/>
-  <include file="sp_customer_abstract.sql"/>
+  <include file="sp_pi.sql"/>
 </databaseChangeLog>
