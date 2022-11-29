@@ -20,6 +20,7 @@ create table address (
 )
 
 --changeset cust_data.dev:3
+-- rollback drop column column primary_insured_status
 alter table customer_abstract add column primary_insured_status varchar(1)
 
 --liquibase formatted sql
